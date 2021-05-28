@@ -14,8 +14,8 @@ void write_array(const int a[], int n);
 
 #include <stdio.h>
 
-void reverse(const int from[], int* to, int n);
-void write_array(const int a[], int n);
+void reverse(const int from[], int* to, int n); // 함수 원형 적어주기
+void write_array(const int a[], int n); // 함수 원형 적어주기
 
 int main(void)
 {
@@ -38,7 +38,7 @@ int main(void)
 void reverse(const int from[], int* to, int n)
 {
 	int i = 0; // 변수 선언 및 초기화
-	for (int j = n-1; j >= 0; j--)
+	for (int j = n-1; j >= 0; j--) // j가 n-1부터 0보다 크거나 같을 때까지 1씩 감소하며 반복
 	{
 		to[i] = from[j]; // to[i]에 from[j] 대입하기
 		i++; // i에 1 더하기
@@ -48,9 +48,9 @@ void reverse(const int from[], int* to, int n)
 void write_array(const int a[], int n)
 {
 	printf("%d : ", n); // n의 값 출력하기
-	for (int i = 0; i < n; i++) // 
+	for (int i = 0; i < n; i++) // i가 0부터 n-1까지 1씩 증가하며 반복
 	{
-		printf("%d ", a[i]);
+		printf("%d ", a[i]); // a[i] 출력하기
 	}
-	printf("\n");
+	printf("\n"); // 한 줄 띄기
 }
