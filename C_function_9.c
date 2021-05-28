@@ -19,31 +19,31 @@ void write_array(const int a[], int n);
 
 int main(void)
 {
-	int n = 0;
-	int array[10] = { 0 };
-	int back[10] = { 0 };
-	printf("10개 이하의 정수를 입력하시오. 다 입력했으면 -100을 입력하시오. : ");
-	for (int i = 0; i < 10; i++)
+	int n = 0; // 변수 선언 및 초기화
+	int array[10] = { 0 }; // 배열 선언 및 초기화
+	int back[10] = { 0 }; // 배열 선언 및 초기화
+	printf("10개 이하의 정수를 입력하시오. 다 입력했으면 -100을 입력하시오. : "); // 안내문 출력
+	for (int i = 0; i < 10; i++) // i가 0부터 9까지 1씩 증가하며 반복
 	{
-		scanf_s("%d", &array[i]);
-		if (array[i] == -100)
-			break;
-		n++;
+		scanf_s("%d", &array[i]); // 사용자로부터 정수 입력받기
+		if (array[i] == -100) // 만약 array[i]가 -100이라면
+			break; // 반복문을 빠져나가기
+		n++; // n에 1 더하기
 	}
-	write_array(array, n);
-	reverse(array, back, n);
+	write_array(array, n); // write_array() 호출하기
+	reverse(array, back, n); // reverse() 호출하기
 	
 	return 0;
 }
 void reverse(const int from[], int* to, int n)
 {
-	int i = 0;
+	int i = 0; // 변수 선언 및 초기화
 	for (int j = n-1; j >= 0; j--)
 	{
-		to[i] = from[j];
-		i++;
+		to[i] = from[j]; // to[i]에 from[j] 대입하기
+		i++; // i에 1 더하기
 	}
-	write_array(to, n);
+	write_array(to, n); // write_array() 호출하기
 }
 void write_array(const int a[], int n)
 {
