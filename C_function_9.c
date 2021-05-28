@@ -47,8 +47,8 @@ void reverse(const int from[], int* to, int n)
 }
 void write_array(const int a[], int n)
 {
-	printf("%d : ", n);
-	for (int i = 0; i < n; i++)
+	printf("%d : ", n); // n의 값 출력하기
+	for (int i = 0; i < n; i++) // 
 	{
 		printf("%d ", a[i]);
 	}
